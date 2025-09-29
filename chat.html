@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask the Constitution of Kenya (2010) RAG</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f7f7f7; }
+        .container { max-width: 700px; margin: auto; }
+        input[type=text] {
+            width: 100%; padding: 12px; margin-top: 10px;
+            border: 1px solid #ccc; border-radius: 6px;
+        }
+        button {
+            padding: 10px 20px; margin-top: 10px;
+            background: #2c7be5; color: white; border: none;
+            border-radius: 6px; cursor: pointer;
+        }
+        .answer {
+            background: #fff; padding: 15px;
+            border-radius: 6px; margin-top: 20px;
+            white-space: pre-wrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+            h3{
+                text-transform: capitalize;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📜 Constitution of Kenya (2010) RAG Chatbot</h1>
+        <form method="post">
+            <input type="text" name="question" placeholder="Ask a question..." required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if answer %}
+        <div class="answer">
+            <h3>Question: {{ question }}</h3>
+            <p><b>Answer:</b><br>{{ answer }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
